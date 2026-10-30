@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make a payment | Ka&#39;Mello Escape</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F3F7F6}
+a{color:#0A6E75}a:hover{color:#074F54}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #F6C453;outline-offset:2px}
+</style>
+
+</head>
+<body>
+
+<div style="min-height: 100vh; background: #F3F7F6; color: #14323C; font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif">
+<header style="background: #0C2B36"><div style="max-width: 1120px; margin: 0 auto; padding: 12px 20px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px"><span style="font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.01em; color: #FFFFFF; white-space: nowrap">Ka&#39;Mello <span style="font-weight: 400">Escape</span></span>
+<nav aria-label="Portal" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 300px"><a href="Portal-Dashboard.html"  style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 14.5px; font-weight: 500; color: #C9DBDE; background: transparent">Dashboard</a><a href="Portal-Bookings.html"  style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 14.5px; font-weight: 500; color: #C9DBDE; background: transparent">My bookings</a><a href="Portal-Documents.html"  style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 14.5px; font-weight: 500; color: #C9DBDE; background: transparent">Documents</a><a href="Portal-Schedule.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 14.5px; font-weight: 500; color: #FFFFFF; background: #16434F">Payment schedule</a><a href="Portal-History.html"  style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 14.5px; font-weight: 500; color: #C9DBDE; background: transparent">Payment history</a><a href="Portal-Profile.html"  style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 14.5px; font-weight: 500; color: #C9DBDE; background: transparent">Profile</a></nav>
+<a href="Portal-Login.html" style="color: #FFFFFF; font-size: 14.5px">Log out</a></div></header>
+<main style="max-width: 1120px; margin: 0 auto; padding: 28px 20px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px"><h1 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: 600; text-wrap: balance">Make a payment</h1></div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #D3DEDF; border-radius: 8px; padding: 20px; min-width: 0; box-sizing: border-box; "><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 19px; font-weight: 600; color: #14323C">Choose an amount</h2><fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px"><legend style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%)">Payment amount</legend>
+<label for="pay-next" style="display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 14px; border: 2px solid #0A6E75; border-radius: 6px; background: #DCEEEE"><input id="pay-next" type="radio" name="amount" checked="checked"><span style="flex: 1">Installment 2, due Oct 30, 2026</span><strong style="font-variant-numeric: tabular-nums">$1,000</strong></label>
+<label for="pay-full" style="display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 14px; border: 1px solid #9DB0B6; border-radius: 6px"><input id="pay-full" type="radio" name="amount"><span style="flex: 1">Full remaining balance</span><strong style="font-variant-numeric: tabular-nums">$3,000</strong></label>
+<label for="pay-other" style="display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 14px; border: 1px solid #9DB0B6; border-radius: 6px"><input id="pay-other" type="radio" name="amount"><span style="flex: 1">Another amount</span></label>
+</fieldset></div></section>
+<section style="background: #FFFFFF; border: 1px solid #D3DEDF; border-radius: 8px; padding: 20px; min-width: 0; box-sizing: border-box; "><div style="display: flex; gap: 12px; color: #0A6E75"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg><span style="font-size: 14.5px; color: #14323C">You enter your card on the secure [PAYMENT GATEWAY] checkout page. Ka&#39;Mello Escape never sees or stores your card number or CVV.</span></div></section>
+</div>
+<aside style="flex: 1 1 300px; min-width: 0; background: #0C2B36; color: #FFFFFF; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 13px; color: #C9DBDE">KE-2026-0142</div>
+<div style="font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 20px; font-weight: 500">Eastern Caribbean 7-Night Cruise</div>
+<div style="border-top: 2px dashed #3F6A76; padding-top: 12px; display: flex; justify-content: space-between"><span style="color: #C9DBDE">Paying now</span><strong style="font-variant-numeric: tabular-nums">$1,000</strong></div>
+<div style="display: flex; justify-content: space-between"><span style="color: #C9DBDE">Balance after payment</span><strong style="font-variant-numeric: tabular-nums">$2,000</strong></div>
+<a href="Portal-Receipt.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #F6C453; color: #3A2A00; border: 1px solid #F6C453">Continue to secure checkout</a>
+</aside></div>
+</main></div>
+
+</body>
+</html>

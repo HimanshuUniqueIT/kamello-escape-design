@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add customer | Ka&#39;Mello Escape</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F3F7F6}
+a{color:#0A6E75}a:hover{color:#074F54}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #F6C453;outline-offset:2px}
+</style>
+
+</head>
+<body>
+
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F3F7F6; color: #14323C; font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif">
+<nav aria-label="Admin" style="flex: 1 1 228px; background: #0C2B36; padding: 22px 14px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div style="padding: 0 10px"><span style="font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.01em; color: #FFFFFF; white-space: nowrap">Ka&#39;Mello <span style="font-weight: 400">Escape</span></span><div style="font-size: 12.5px; color: #C9DBDE; margin-top: 3px">Admin</div></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><a href="Admin-Dashboard.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Dashboard</a><a href="Admin-Customers.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #16434F">Customers</a><a href="Admin-Bookings.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Bookings</a><a href="Admin-CreateBooking.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Create booking</a><a href="Admin-Documents.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Documents</a><a href="Admin-PaymentPlans.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Payment plans</a><a href="Admin-Transactions.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Transactions</a><a href="Admin-Notifications.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Notifications</a><a href="Admin-Settings.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Settings</a></div>
+<div style="padding: 12px 10px 0; border-top: 1px solid #16434F; font-size: 14px; color: #C9DBDE">Ricardo<br><a href="Admin-Login.html" style="color: #FFFFFF">Log out</a></div>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 28px clamp(16px, 3vw, 36px) 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px"><h1 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: 600; text-wrap: balance">Add customer</h1></div>
+
+<div style="max-width: 760px"><section style="background: #FFFFFF; border: 1px solid #D3DEDF; border-radius: 8px; padding: 20px; min-width: 0; box-sizing: border-box; "><div style="display: flex; flex-direction: column; gap: 16px; min-width: 0"><div style="font-size: 13px; color: #4B626C; ">The customer ID is generated when you save. The customer gets an invitation to set their password.</div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px; align-items: start"><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="ac-first" style="font-size: 13.5px; font-weight: 600; color: #14323C">First name</label><input id="ac-first" type="text" value="" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="ac-last" style="font-size: 13.5px; font-weight: 600; color: #14323C">Last name</label><input id="ac-last" type="text" value="" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="ac-email" style="font-size: 13.5px; font-weight: 600; color: #14323C">Email</label><input id="ac-email" type="email" value="" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="ac-phone" style="font-size: 13.5px; font-weight: 600; color: #14323C">Phone</label><input id="ac-phone" type="tel" value="" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="ac-address" style="font-size: 13.5px; font-weight: 600; color: #14323C">Address</label><input id="ac-address" type="text" value="" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="ac-country" style="font-size: 13.5px; font-weight: 600; color: #14323C">Country</label><select id="ac-country" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 10px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"><option>Bahamas</option><option>United States</option><option>Canada</option><option>United Kingdom</option><option>Other</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="ac-status" style="font-size: 13.5px; font-weight: 600; color: #14323C">Status</label><select id="ac-status" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 10px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"><option>Active</option><option>Inactive</option></select></div></div><div id="ac-error" role="alert" style="color: #A3281C; font-weight: 600"></div><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; "><a id="ac-save" href="Admin-Customers.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #0A6E75; color: #FFFFFF; border: 1px solid #0A6E75">Save customer</a><a href="Admin-Customers.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #FFFFFF; color: #14323C; border: 1px solid #9DB0B6">Cancel</a></div></div></section></div>
+
+</main></div>
+<script>
+(function () {
+  var KEY = 'kamello-added-customers';
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } }
+  var v = function (id) { return document.getElementById(id).value.trim(); };
+  document.getElementById('ac-save').addEventListener('click', function (e) {
+    e.preventDefault();
+    var c = { first: v('ac-first'), last: v('ac-last'), email: v('ac-email'), phone: v('ac-phone'), address: v('ac-address'), country: v('ac-country'), status: v('ac-status') };
+    var err = document.getElementById('ac-error');
+    if (!c.first || !c.last) { err.textContent = 'Enter the customer\'s first and last name.'; return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.email)) { err.textContent = 'Enter a valid email address, like name@example.com.'; return; }
+    var list = load();
+    if (list.some(function (x) { return x.email.toLowerCase() === c.email.toLowerCase(); }) || ["alicia.rolle@example.com","marcus.ferguson@example.com","denise.knowles@example.com","trevor.moss@example.com","simone.pinder@example.com","jerome.bethel@example.com","renee.cartwright@example.com"].indexOf(c.email.toLowerCase()) >= 0) { err.textContent = 'A customer with this email already exists.'; return; }
+    c.id = 'C-' + (1008 + list.length);
+    list.push(c);
+    try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (ex) { err.textContent = 'This browser blocked saving. Allow site data and try again.'; return; }
+    location.href = 'Admin-Customers.html?added=' + encodeURIComponent(c.id);
+  });
+})();
+</script>
+</body>
+</html>

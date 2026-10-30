@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create booking | Ka&#39;Mello Escape</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F3F7F6}
+a{color:#0A6E75}a:hover{color:#074F54}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #F6C453;outline-offset:2px}
+</style>
+
+</head>
+<body>
+
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F3F7F6; color: #14323C; font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif">
+<nav aria-label="Admin" style="flex: 1 1 228px; background: #0C2B36; padding: 22px 14px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div style="padding: 0 10px"><span style="font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.01em; color: #FFFFFF; white-space: nowrap">Ka&#39;Mello <span style="font-weight: 400">Escape</span></span><div style="font-size: 12.5px; color: #C9DBDE; margin-top: 3px">Admin</div></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><a href="Admin-Dashboard.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Dashboard</a><a href="Admin-Customers.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Customers</a><a href="Admin-Bookings.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Bookings</a><a href="Admin-CreateBooking.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #16434F">Create booking</a><a href="Admin-Documents.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Documents</a><a href="Admin-PaymentPlans.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Payment plans</a><a href="Admin-Transactions.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Transactions</a><a href="Admin-Notifications.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Notifications</a><a href="Admin-Settings.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Settings</a></div>
+<div style="padding: 12px 10px 0; border-top: 1px solid #16434F; font-size: 14px; color: #C9DBDE">Ricardo<br><a href="Admin-Login.html" style="color: #FFFFFF">Log out</a></div>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 28px clamp(16px, 3vw, 36px) 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px"><h1 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: 600; text-wrap: balance">Create booking</h1></div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+<div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #D3DEDF; border-radius: 8px; padding: 20px; min-width: 0; box-sizing: border-box; "><div style="display: flex; flex-direction: column; gap: 16px; min-width: 0"><h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 19px; font-weight: 600; color: #14323C">Booking details</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px; align-items: start"><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-customer" style="font-size: 13.5px; font-weight: 600; color: #14323C">Customer</label><select id="cb-customer" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 10px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"><option>Alicia Rolle (C-1001)</option><option>Marcus Ferguson (C-1002)</option><option>Denise Knowles (C-1003)</option><option>Trevor Moss (C-1004)</option><option>Simone Pinder (C-1005)</option><option>Renee Cartwright (C-1007)</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-category" style="font-size: 13.5px; font-weight: 600; color: #14323C">Booking category</label><select id="cb-category" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 10px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"><option>Cruise</option><option>Vacation</option></select></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-title" style="font-size: 13.5px; font-weight: 600; color: #14323C">Booking title</label><input id="cb-title" type="text" value="Eastern Caribbean 7-Night Cruise" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-destination" style="font-size: 13.5px; font-weight: 600; color: #14323C">Destination</label><input id="cb-destination" type="text" value="St. Maarten &amp; St. Thomas" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-departure" style="font-size: 13.5px; font-weight: 600; color: #14323C">Departure date</label><input id="cb-departure" type="date" value="2027-03-14" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-return" style="font-size: 13.5px; font-weight: 600; color: #14323C">Return date</label><input id="cb-return" type="date" value="2027-03-21" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-travellers" style="font-size: 13.5px; font-weight: 600; color: #14323C">Travellers</label><input id="cb-travellers" type="number" value="2" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-status" style="font-size: 13.5px; font-weight: 600; color: #14323C">Status</label><select id="cb-status" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 10px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"><option>Draft</option><option>Confirmed</option><option>Completed</option><option>Cancelled</option></select></div></div><div style="display: flex; flex-direction: column; gap: 6px"><label for="cb-description" style="font-size: 13.5px; font-weight: 600">Description</label><textarea id="cb-description" rows="3" placeholder="Additional information shown to the customer" style="box-sizing: border-box; width: 100%; padding: 10px 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit"></textarea></div></div></section>
+<section style="background: #FFFFFF; border: 1px solid #D3DEDF; border-radius: 8px; padding: 20px; min-width: 0; box-sizing: border-box; "><div style="display: flex; flex-direction: column; gap: 16px; min-width: 0"><h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 19px; font-weight: 600; color: #14323C">Deposit and payment plan</h2><div style="display: flex; flex-direction: column; gap: 6px; max-width: 260px"><label for="cb-total" style="font-size: 13.5px; font-weight: 600">Total amount (USD)</label><input id="cb-total" type="number" min="0" value="5000" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 13.5px; font-weight: 600">Deposit</div><div style="display: flex; flex-wrap: wrap; gap: 8px"><div id="pcts" style="display: contents"></div></div></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><div style="font-size: 13.5px; font-weight: 600">Payment frequency</div><div style="display: flex; flex-wrap: wrap; gap: 8px"><div id="freqs" style="display: contents"></div></div></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px; align-items: start"><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-first" style="font-size: 13.5px; font-weight: 600; color: #14323C">First installment date</label><input id="cb-first" type="date" value="2026-11-30" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div><div style="display: flex; flex-direction: column; gap: 6px; min-width: 0"><label for="cb-final" style="font-size: 13.5px; font-weight: 600; color: #14323C">Final payment deadline</label><input id="cb-final" type="date" value="2027-02-28" style="min-height: 44px; box-sizing: border-box; width: 100%; padding: 0 12px; border: 1px solid #9DB0B6; border-radius: 6px; font: inherit; color: #14323C; background: #FFFFFF"></div></div></div></section>
+</div>
+<aside style="flex: 1 1 320px; min-width: 0; background: #0C2B36; color: #FFFFFF; border-radius: 8px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 19px; font-weight: 600">Customer pays</h2>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span style="color: #C9DBDE">Initial deposit</span><strong style="font-variant-numeric: tabular-nums"><span id="depositText"></span></strong></div>
+<div style="display: flex; justify-content: space-between; gap: 12px"><span style="color: #C9DBDE">Remaining balance</span><strong style="font-variant-numeric: tabular-nums"><span id="remainingText"></span></strong></div>
+<div style="border-top: 2px dashed #3F6A76; padding-top: 14px; font-weight: 600"><span id="countText"></span></div>
+<div id="rows" style="display: flex; flex-direction: column; gap: 8px"></div>
+<div style="font-size: 13px; color: #C9DBDE">Adjust individual amounts after saving, in Payment plans.</div>
+<a href="Admin-BookingDetails.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #F6C453; color: #3A2A00; border: 1px solid #F6C453">Create booking</a>
+<a href="Admin-Bookings.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #FFFFFF; color: #14323C; border: 1px solid #9DB0B6">Save as draft</a>
+</aside>
+</div>
+
+</main></div>
+<script>
+(function () {
+  var state = { total: 5000, pct: 20, freq: 'Monthly' };
+  var money = function (n) { return '$' + n.toLocaleString('en-US', { maximumFractionDigits: 2 }); };
+  var iso = function (x) { return x.toISOString().slice(0, 10); };
+  var fmt = function (s) { return new Date(s + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }); };
+  var el = function (id) { return document.getElementById(id); };
+  function buttons(host, items, active, pick) {
+    host.innerHTML = '';
+    items.forEach(function (it) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = it.label;
+      var on = it.value === active;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.style.cssText = 'min-height:44px;flex:1 1 90px;padding:0 14px;border-radius:6px;border:1px solid #9DB0B6;font:inherit;font-weight:600;cursor:pointer;background:' + (on ? '#0A6E75' : '#FFFFFF') + ';color:' + (on ? '#FFFFFF' : '#14323C');
+      b.onclick = function () { pick(it.value); render(); };
+      host.appendChild(b);
+    });
+  }
+  function render() {
+    var amount = Number(state.total) || 0;
+    var deposit = Math.round(amount * state.pct) / 100;
+    var remaining = Math.round((amount - deposit) * 100) / 100;
+    var start = el('cb-first').value, end = el('cb-final').value, dates = [];
+    for (var i = 0; i < 200 && start && end; i++) {
+      var x = new Date(start + 'T00:00:00Z');
+      if (state.freq === 'Monthly') {
+        var day = x.getUTCDate();
+        x.setUTCDate(1); x.setUTCMonth(x.getUTCMonth() + i);
+        var last = new Date(Date.UTC(x.getUTCFullYear(), x.getUTCMonth() + 1, 0)).getUTCDate();
+        x.setUTCDate(Math.min(day, last));
+      } else x.setUTCDate(x.getUTCDate() + i * (state.freq === 'Weekly' ? 7 : 14));
+      if (iso(x) > end) break;
+      dates.push(iso(x));
+    }
+    var each = dates.length ? Math.floor(remaining / dates.length * 100) / 100 : 0;
+    el('depositText').textContent = money(deposit);
+    el('remainingText').textContent = money(remaining);
+    el('countText').textContent = dates.length + (dates.length === 1 ? ' installment' : ' installments');
+    var rows = el('rows');
+    rows.innerHTML = '';
+    dates.forEach(function (s, i) {
+      var a = i === dates.length - 1 ? Math.round((remaining - each * (dates.length - 1)) * 100) / 100 : each;
+      var r = document.createElement('div');
+      r.style.cssText = 'display:flex;justify-content:space-between;gap:10px;font-size:14px';
+      var l = document.createElement('span'); l.style.color = '#C9DBDE'; l.textContent = fmt(s);
+      var v = document.createElement('span'); v.style.fontVariantNumeric = 'tabular-nums'; v.textContent = money(a);
+      r.appendChild(l); r.appendChild(v); rows.appendChild(r);
+    });
+    buttons(el('pcts'), [20, 30, 50].map(function (p) { return { label: p + '%', value: p }; }), state.pct, function (v) { state.pct = v; });
+    buttons(el('freqs'), ['Weekly', 'Biweekly', 'Monthly'].map(function (f) { return { label: f, value: f }; }), state.freq, function (v) { state.freq = v; });
+  }
+  el('cb-total').addEventListener('input', function (e) { state.total = e.target.value; render(); });
+  el('cb-first').addEventListener('input', render);
+  el('cb-final').addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>
