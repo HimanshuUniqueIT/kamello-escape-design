@@ -10,6 +10,45 @@
 body{margin:0;background:#F3F7F6}
 a{color:#0A6E75}a:hover{color:#074F54}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #F6C453;outline-offset:2px}
+
+.pd-back{align-self:flex-start;color:#0A6E75;font-weight:600;font-size:14.5px}
+.pd-top{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:12px}
+.pd-top h1{margin:0;font-family:'Bricolage Grotesque','Trebuchet MS',sans-serif;font-size:30px;font-weight:600}
+.pd-lead{margin:6px 0 0;font-size:15px;color:#4B626C}
+.pd-acts{display:flex;flex-wrap:wrap;gap:10px}
+.pd-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:6px;font-weight:600;font-size:14.5px;text-decoration:none;background:#fff;color:#14323C;border:1px solid #9DB0B6;box-sizing:border-box}
+.pd-btn.pri{background:#0A6E75;color:#fff;border-color:#0A6E75}
+.pd-card{background:#fff;border:1px solid #D3DEDF;border-radius:8px;min-width:0;box-sizing:border-box}
+.pd-pad{padding:16px 20px}
+.pd-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;padding:16px 20px 10px}
+.pd-head h2{margin:0;font-family:'Bricolage Grotesque','Trebuchet MS',sans-serif;font-size:18px;font-weight:600}
+.pd-sub{font-size:12.5px;color:#4B626C}
+.pd-mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+.pd-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap}
+.pd-steps{display:flex;flex-wrap:wrap;gap:6px}
+.pd-step{font-size:13px;font-weight:600;padding:7px 12px;border-radius:6px;background:#EEF2F3;color:#4B626C}.pd-step.done{background:#E3F1F1;color:#0A6E75}.pd-step.fail{background:#FBE9E7;color:#A12A1C}
+.pd-callout{display:flex;gap:10px;padding:14px 16px;border-radius:8px;background:#FBE9E7;border:1px solid #E7B7B0;color:#5E1A12;font-size:14.5px}
+.pd-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.pd-tile{padding:16px 18px}.pd-tile .l{font-size:13px;color:#4B626C}.pd-tile .v{font-family:'Bricolage Grotesque','Trebuchet MS',sans-serif;font-size:26px;font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums}.pd-tile .s{font-size:13px;color:#4B626C;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pd-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:20px;align-items:start}
+.pd-stack{display:flex;flex-direction:column;gap:20px;min-width:0}
+.pd-tl{list-style:none;margin:0;padding:6px 20px 16px}
+.pd-tl li{display:grid;grid-template-columns:110px 1fr;gap:14px;position:relative;padding:0 0 16px;font-size:14.5px}
+.pd-tl li>div:last-child{position:relative;padding-left:20px}
+.pd-tl li>div:last-child:before{content:"";position:absolute;left:0;top:5px;width:10px;height:10px;border-radius:50%;background:#9FB3B8}
+.pd-tl li>div:last-child:after{content:"";position:absolute;left:4.5px;top:18px;bottom:-14px;width:1px;background:#D3DEDF}
+.pd-tl li:last-child>div:last-child:after{display:none}
+.pd-tl li.ok>div:last-child:before{background:#0A6E75}.pd-tl li.bad>div:last-child:before{background:#C0392B}
+.pd-when{font-size:12.5px;color:#4B626C;font-variant-numeric:tabular-nums;text-align:right}
+.pd-actor{display:inline-block;margin-top:4px;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:99px;background:#EEF2F3;color:#4B626C}
+.pd-scroll{overflow-x:auto;padding:0 8px 8px}
+.pd-t{width:100%;border-collapse:collapse}
+.pd-t th{text-align:left;padding:10px 12px;font-size:12.5px;font-weight:600;color:#4B626C;border-bottom:1px solid #D3DEDF;white-space:nowrap}
+.pd-t td{padding:10px 12px;font-size:14px;border-bottom:1px solid #E8EEEE;font-variant-numeric:tabular-nums;vertical-align:top}
+.pd-t tr:last-child td{border-bottom:0}.pd-t .r{text-align:right}.pd-t tr.cur td{background:#F1F8F8}
+.pd-dl{display:grid;grid-template-columns:auto 1fr;gap:9px 16px;margin:0;padding:4px 20px 18px;font-size:14px}.pd-dl dt{color:#4B626C}.pd-dl dd{margin:0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+@media (max-width:980px){.pd-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.pd-tl li{grid-template-columns:1fr;gap:2px}.pd-when{text-align:left}}
 </style>
 
 </head>
@@ -17,17 +56,114 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <div style="min-height: 100vh; display: flex; flex-wrap: wrap; background: #F3F7F6; color: #14323C; font-family: 'Figtree', 'Segoe UI', system-ui, sans-serif">
 <nav aria-label="Admin" style="flex: 1 1 228px; background: #0C2B36; padding: 22px 14px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
-<div style="padding: 0 10px"><span style="font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.01em; color: #FFFFFF; white-space: nowrap">Ka&#39;Mello <span style="font-weight: 400">Escape</span></span><div style="font-size: 12.5px; color: #C9DBDE; margin-top: 3px">Admin</div></div>
+<div style="padding: 0 10px"><span style="display: inline-flex; align-items: center; gap: 10px"><img src="assets/logo-mark.png" alt="" width="40" height="40" style="display: block"><span style="font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.01em; color: #FFFFFF; white-space: nowrap">Ka&#39;Mello <span style="font-weight: 400">Escape</span></span></span><div style="font-size: 12.5px; color: #C9DBDE; margin-top: 3px">Admin</div></div>
 <div style="display: flex; flex-direction: column; gap: 2px"><a href="Admin-Dashboard.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Dashboard</a><a href="Admin-Customers.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Customers</a><a href="Admin-Bookings.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Bookings</a><a href="Admin-CreateBooking.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Create booking</a><a href="Admin-Documents.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Documents</a><a href="Admin-PaymentPlans.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Payment plans</a><a href="Admin-Transactions.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #16434F">Transactions</a><a href="Admin-Notifications.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Notifications</a><a href="Admin-Settings.html"  style="display: flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 500; color: #C9DBDE; background: transparent">Settings</a></div>
-<div style="padding: 12px 10px 0; border-top: 1px solid #16434F; font-size: 14px; color: #C9DBDE">Ricardo<br><a href="Admin-Login.html" style="color: #FFFFFF">Log out</a></div>
+<a href="Portal-Dashboard.html" style="display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 10px; border: 1px solid #C9DBDE; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 600; color: #FFFFFF">Switch to customer</a>
+<div style="padding: 12px 10px 0; border-top: 1px solid #16434F; font-size: 14px; color: #C9DBDE">Ricardo<br><a href="Portal-Login.html?as=admin" style="color: #FFFFFF">Log out</a></div>
 </nav>
-<main style="flex: 999 1 560px; min-width: 0; padding: 28px clamp(16px, 3vw, 36px) 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
-<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px"><h1 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: 600; text-wrap: balance">TXN-880745</h1><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; "><a href="Admin-PaymentDetails.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #FFFFFF; color: #14323C; border: 1px solid #9DB0B6">Download receipt</a><a href="Admin-PaymentDetails.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #FFFFFF; color: #14323C; border: 1px solid #9DB0B6">Email receipt</a><a href="Admin-PaymentDetails.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; box-sizing: border-box; padding: 0 18px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none; background: #FFFFFF; color: #14323C; border: 1px solid #9DB0B6">Record refund</a></div></div>
+<main style="flex: 999 1 560px; min-width: 0; padding: 28px clamp(16px, 3vw, 36px) 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px" id="pd-main"></main></div>
 
-<section style="background: #FFFFFF; border: 1px solid #D3DEDF; border-radius: 8px; padding: 20px; min-width: 0; box-sizing: border-box; "><div style="display: flex; flex-direction: column; gap: 16px; min-width: 0"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px"><h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 19px; font-weight: 600; color: #14323C">Transaction</h2><span style="display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap; background: #0A6E75; color: #FFFFFF; border: 1px solid #0A6E75">Successful</span></div><dl style="margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 16px"><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Receipt number</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">RCP-2026-0010</dd></div><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Customer name</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">Alicia Rolle</dd></div><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Booking reference</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">KE-2026-0142</dd></div><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Payment date</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">Sep 30, 2026</dd></div><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Payment amount</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">$1,000</dd></div><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Transaction reference</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">TXN-880745</dd></div><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Payment method</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">Visa ending 4821</dd></div><div style="min-width: 0"><dt style="font-size: 13px; color: #4B626C">Remaining balance</dt><dd style="margin: 3px 0 0; font-size: 15px; font-weight: 500; color: #14323C; overflow-wrap: anywhere">$3,000</dd></div></dl></div></section>
-<section style="background: #FFFFFF; border: 1px solid #D3DEDF; border-radius: 8px; padding: 20px; min-width: 0; box-sizing: border-box; "><div style="display: flex; flex-direction: column; gap: 12px; min-width: 0"><h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; font-size: 19px; font-weight: 600; color: #14323C">Gateway log</h2><div style="overflow-x: auto"><table style="width: 100%; border-collapse: collapse"><thead><tr><th scope="col" style="text-align: left; padding: 10px 12px; font-size: 12.5px; font-weight: 600; color: #4B626C; border-bottom: 1px solid #D3DEDF; white-space: nowrap">Time</th><th scope="col" style="text-align: left; padding: 10px 12px; font-size: 12.5px; font-weight: 600; color: #4B626C; border-bottom: 1px solid #D3DEDF; white-space: nowrap">Event</th><th scope="col" style="text-align: left; padding: 10px 12px; font-size: 12.5px; font-weight: 600; color: #4B626C; border-bottom: 1px solid #D3DEDF; white-space: nowrap">Result</th></tr></thead><tbody><tr><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Sep 30, 2026, 10:42 AM</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Checkout session created</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">OK</td></tr><tr><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Sep 30, 2026, 10:44 AM</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Webhook received, signature verified</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">OK</td></tr><tr><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Sep 30, 2026, 10:44 AM</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Balance updated, receipt issued</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">OK</td></tr><tr><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Sep 30, 2026, 10:45 AM</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">Duplicate webhook ignored</td><td style="text-align: left; padding: 12px; font-size: 14.5px; color: #14323C; border-bottom: 1px solid #E8EEEE; font-variant-numeric: tabular-nums">No change</td></tr></tbody></table></div></div></section>
-
-</main></div>
-
+<script>
+(function(){
+var TODAY='2026-10-31', GW='[PAYMENT GATEWAY]';
+var C={'Alicia Rolle':{id:'C-1001',email:'alicia.rolle@example.com',phone:'+1 242 555 0142',country:'Bahamas',device:'iPhone · Safari',ip:'64.66.12.41'},
+'Marcus Ferguson':{id:'C-1002',email:'marcus.ferguson@example.com',phone:'+1 242 555 0117',country:'Bahamas',device:'Windows · Chrome',ip:'64.66.18.203'},
+'Denise Knowles':{id:'C-1003',email:'denise.knowles@example.com',phone:'+1 242 555 0163',country:'Bahamas',device:'Android · Chrome',ip:'64.150.4.77'},
+'Trevor Moss':{id:'C-1004',email:'trevor.moss@example.com',phone:'+1 242 555 0188',country:'Bahamas',device:'Mac · Safari',ip:'64.66.30.9'},
+'Simone Pinder':{id:'C-1005',email:'simone.pinder@example.com',phone:'+1 242 555 0129',country:'Bahamas',device:'iPhone · Safari',ip:'64.150.22.118'},
+'Jerome Bethel':{id:'C-1006',email:'jerome.bethel@example.com',phone:'+1 242 555 0104',country:'Bahamas',device:'Windows · Edge',ip:'64.66.41.150'}};
+var B={'KE-2026-0142':{c:'Alicia Rolle',title:'Eastern Caribbean 7-Night Cruise',type:'Cruise',dates:'Mar 14 – Mar 21, 2027',trav:2,total:5000,dep:1000,n:4,amt:1000,freq:'monthly'},
+'KE-2026-0147':{c:'Marcus Ferguson',title:'Punta Cana All-Inclusive',type:'Vacation',dates:'Jan 16 – Jan 23, 2027',trav:2,total:3600,dep:1080,n:6,amt:420,freq:'biweekly'},
+'KE-2026-0151':{c:'Denise Knowles',title:'Western Caribbean 5-Night Cruise',type:'Cruise',dates:'Feb 6 – Feb 11, 2027',trav:2,total:2800,dep:1400,n:2,amt:700,freq:'monthly'},
+'KE-2026-0155':{c:'Trevor Moss',title:'Cancún Family Week',type:'Vacation',dates:'Apr 3 – Apr 10, 2027',trav:4,total:6400,dep:1920,n:4,amt:1120,freq:'monthly'},
+'KE-2026-0158':{c:'Simone Pinder',title:'Alaska Inside Passage 7-Night Cruise',type:'Cruise',dates:'May 22 – May 29, 2027',trav:2,total:8200,dep:1640,n:8,amt:820,freq:'weekly'},
+'KE-2026-0163':{c:'Alicia Rolle',title:'Orlando Family Theme Park Week',type:'Vacation',dates:'Jul 10 – Jul 17, 2027',trav:4,total:4800,dep:1200,n:6,amt:600,freq:'monthly'},
+'KE-2026-0118':{c:'Alicia Rolle',title:'Harbour Island Getaway',type:'Vacation',dates:'Jun 5 – Jun 9, 2026',trav:2,total:1800,dep:900,n:1,amt:900,freq:'monthly'},
+'KE-2026-0109':{c:'Jerome Bethel',title:'Bermuda 4-Night Cruise',type:'Cruise',dates:'May 16 – May 20, 2026',trav:2,total:3000,dep:1500,n:1,amt:1500,freq:'monthly'}};
+// id, date, time, booking, card, amount, status
+var T=[['TXN-881299','2026-10-25','7:18 PM','KE-2026-0155','Visa ending 2046',1120,'Failed'],
+['TXN-880930','2026-10-24','8:02 AM','KE-2026-0158','Mastercard ending 6152',820,'Successful'],
+['TXN-880893','2026-10-17','8:01 AM','KE-2026-0158','Mastercard ending 6152',820,'Successful'],
+['TXN-880871','2026-10-15','6:12 PM','KE-2026-0163','Visa ending 4821',1200,'Successful'],
+['TXN-880856','2026-10-10','8:03 AM','KE-2026-0158','Mastercard ending 6152',820,'Successful'],
+['TXN-880819','2026-10-03','2:47 PM','KE-2026-0158','Mastercard ending 6152',1640,'Successful'],
+['TXN-880782','2026-10-02','12:15 PM','KE-2026-0147','Mastercard ending 3390',420,'Successful'],
+['TXN-880745','2026-09-30','10:44 AM','KE-2026-0142','Visa ending 4821',1000,'Successful'],
+['TXN-880708','2026-09-25','6:30 PM','KE-2026-0155','Visa ending 2046',1920,'Successful'],
+['TXN-880671','2026-09-18','12:09 PM','KE-2026-0147','Mastercard ending 3390',420,'Successful'],
+['TXN-880634','2026-09-15','9:26 AM','KE-2026-0151','Visa ending 7715',1400,'Successful'],
+['TXN-880597','2026-09-04','5:52 PM','KE-2026-0147','Mastercard ending 3390',1080,'Successful'],
+['TXN-880560','2026-08-31','9:20 AM','KE-2026-0142','Visa ending 4821',1000,'Successful'],
+['TXN-880523','2026-04-10','4:05 PM','KE-2026-0118','Visa ending 4821',900,'Successful'],
+['TXN-880486','2026-03-12','11:40 AM','KE-2026-0109','Visa ending 9038',1500,'Successful'],
+['TXN-880449','2026-03-10','11:30 AM','KE-2026-0118','Visa ending 4821',900,'Successful'],
+['TXN-880412','2026-02-12','3:12 PM','KE-2026-0109','Visa ending 9038',1500,'Successful']].map(function(r){var b=B[r[3]];return {id:r[0],date:r[1],time:r[2],bk:r[3],card:r[4],amt:r[5],status:r[6],cust:b.c};});
+// receipts in time order, labels and balances per booking
+T.slice().sort(function(a,b){return a.date.localeCompare(b.date)}).filter(function(t){return t.status==='Successful'&&t.id!=='TXN-880871'}).forEach(function(t,i){t.rcp='RCP-2026-'+String(i+1).padStart(4,'0')});T.forEach(function(t){if(t.id==='TXN-880871')t.rcp='RCP-2026-0016'});
+Object.keys(B).forEach(function(k){var paid=0,n=0;T.filter(function(t){return t.bk===k}).sort(function(a,b){return a.date.localeCompare(b.date)}).forEach(function(t){t.label=n===0?'Initial deposit':'Installment '+n;t.before=B[k].total-paid;if(t.status==='Successful'){paid+=t.amt;n++;}t.after=B[k].total-paid;});B[k].paid=paid;});
+var FAIL={'TXN-881299':{reason:'Card declined by the bank: insufficient funds',code:'card_declined · insufficient_funds',step:'Bank authorisation',src:'Customer’s bank (Visa ending 2046)',advice:'Ask Trevor to try another card or contact his bank. You can resend the payment link from here; the installment stays overdue until it is paid.'}};
+var $=function(s){return document.querySelector(s)}, esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var money=function(n,d){return '$'+n.toLocaleString('en-US',{minimumFractionDigits:d||0,maximumFractionDigits:d||0})};
+var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var pd=function(s){var p=s.split('-');return new Date(+p[0],p[1]-1,+p[2])};
+var iso=function(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+var fd=function(s){var d=pd(s);return M[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear()};
+var addD=function(s,n){var d=pd(s);d.setDate(d.getDate()+n);return iso(d)};
+var bizD=function(s,n){var d=pd(s);while(n>0){d.setDate(d.getDate()+1);if(d.getDay()%6)n--;}return iso(d)};
+var minus=function(t,m){var p=t.match(/(\d+):(\d+) (AM|PM)/),h=+p[1]%12+(p[3]==='PM'?12:0),x=h*60+ +p[2]-m;h=Math.floor(x/60);return ((h%12)||12)+':'+String(x%60).padStart(2,'0')+' '+(h<12?'AM':'PM')};
+function plan(k){var b=B[k],d=T.filter(function(t){return t.bk===k}).sort(function(a,c){return a.date.localeCompare(c.date)}),dep=d[0],rows=[{n:'Initial deposit',due:dep.date,amt:b.dep}];
+  for(var i=1;i<=b.n;i++){var dt=pd(dep.date);if(b.freq==='monthly'){var dd=Math.min(dt.getDate(),30);dt.setDate(1);dt.setMonth(dt.getMonth()+i);dt.setDate(Math.min(dd,new Date(dt.getFullYear(),dt.getMonth()+1,0).getDate()));}else dt.setDate(dt.getDate()+i*(b.freq==='weekly'?7:14));rows.push({n:'Installment '+i,due:iso(dt),amt:b.amt});}
+  var ok=d.filter(function(t){return t.status==='Successful'}),firstOpen=true;
+  rows.forEach(function(r,i){var t=ok[i];if(t){r.st='Paid';r.t=t;}else if(r.due<addD(TODAY,-3)){r.st='Overdue';}else if(firstOpen){r.st='Due';firstOpen=false;}else r.st='Upcoming';});return rows;}
+var BADGE={Successful:'background:#0A6E75;color:#fff;border:1px solid #0A6E75',Paid:'background:#0A6E75;color:#fff;border:1px solid #0A6E75',Failed:'background:#FBE9E7;color:#A12A1C;border:1px solid #E7B7B0',Overdue:'background:#FBE9E7;color:#A12A1C;border:1px solid #E7B7B0',Due:'background:#F6C453;color:#14323C;border:1px solid #F6C453',Upcoming:'background:#fff;color:#4B626C;border:1px solid #C3D0D3'};
+var badge=function(s){return '<span class="pd-badge" style="'+BADGE[s]+'">'+s+'</span>'};
+var id=new URLSearchParams(location.search).get('id')||'TXN-880745', x=T.filter(function(t){return t.id===id})[0], main=$('#pd-main');
+if(!x){main.innerHTML='<a href="Admin-Transactions.html" class="pd-back">← Transactions</a><section class="pd-card pd-pad">No payment with reference <b class="pd-mono">'+esc(id)+'</b>. <a href="Admin-Transactions.html">Back to transactions</a></section>';return;}
+var b=B[x.bk], c=C[x.cust], f=FAIL[x.id], ok=x.status==='Successful';
+var fee=ok?Math.round((x.amt*0.029+0.30)*100)/100:0, vat=ok?Math.round(fee*0.10*100)/100:0, net=x.amt-fee-vat;
+var settle=ok?bizD(x.date,2):null, settled=ok&&settle<=TODAY;
+// journey
+var J=[{t:minus(x.time,2),w:x.cust.split(' ')[0]+' opened the payment page in the customer portal',d:x.label+' · '+money(x.amt)+' due',a:'Customer'},
+       {t:minus(x.time,1),w:'Checkout started with '+x.card,d:c.device+' · IP '+c.ip,a:'Customer'},
+       {t:x.time,w:'Payment sent to '+GW+' for authorisation',d:'',a:'System'}];
+if(ok){J.push({t:x.time,w:'Approved by the card issuer',d:'Authorisation code '+x.id.slice(-6),a:'Bank',k:'ok'},{t:x.time,w:'Payment captured',d:money(x.amt)+' USD',a:GW,k:'ok'},{t:x.time,w:'Booking balance updated',d:money(x.before)+' → '+money(x.after),a:'System',k:'ok'},{t:x.time,w:'Receipt '+x.rcp+' emailed',d:c.email,a:'System',k:'ok'});
+  if(x.id==='TXN-880745')J.push({t:minus(x.time,-1),w:'Duplicate confirmation from the gateway ignored',d:'Customer was charged once',a:'System'});
+  J.push(settled?{dt:settle,t:'9:00 AM',w:'Settled to Ka’Mello Escapes bank account',d:'Net '+money(net,2)+' after fees',a:GW,k:'ok'}:{dt:settle,t:'',w:'Settlement expected',d:'Net '+money(net,2)+' after fees',a:GW});}
+else{J.push({t:x.time,w:'Declined by the card issuer',d:f.reason,a:'Bank',k:'bad'},{t:x.time,w:'No money was taken',d:'Booking balance stayed at '+money(x.before),a:'System'},{t:minus(x.time,-1),w:'Failed payment email sent to '+x.cust.split(' ')[0],d:c.email,a:'System'},{dt:addD(x.date,3),t:'9:00 AM',w:'Installment marked overdue',d:'Reminder scheduled',a:'System',k:'bad'});}
+var steps=ok?['Checkout started','Sent to gateway','Authorised','Captured','Receipt sent',settled?'Settled':'Settlement pending']:['Checkout started','Sent to gateway','Declined'];
+var stepHtml=steps.map(function(s,i){var cls=!ok&&i===2?'fail':(ok&&i===5&&!settled?'':'done');return '<span class="pd-step '+cls+'">'+(cls==='fail'?'✕ ':cls==='done'?'✓ ':'')+s+'</span>'}).join('');
+var tx=function(list){return '<div class="pd-scroll"><table class="pd-t"><thead><tr><th>Date</th><th>Transaction</th><th>Paid for</th><th>Card</th><th class="r">Amount</th><th>Status</th></tr></thead><tbody>'+list.map(function(t){return '<tr'+(t.id===x.id?' class="cur"':'')+'><td>'+fd(t.date)+'<div class="pd-sub">'+t.time+'</div></td><td><a class="pd-mono" href="Admin-PaymentDetails.html?id='+t.id+'">'+t.id+'</a>'+(t.id===x.id?'<div class="pd-sub">This payment</div>':'')+'</td><td>'+t.label+'<div class="pd-sub">'+t.bk+'</div></td><td>'+t.card+'</td><td class="r">'+money(t.amt)+'</td><td>'+badge(t.status)+'</td></tr>'}).join('')+'</tbody></table></div>'};
+var attempts=T.filter(function(t){return t.bk===x.bk&&t.label===x.label}).sort(function(a,c){return a.date.localeCompare(c.date)});
+var hist=T.filter(function(t){return t.cust===x.cust}), hok=hist.filter(function(t){return t.status==='Successful'});
+var P=plan(x.bk);
+var dl=function(rows){return '<dl class="pd-dl">'+rows.filter(Boolean).map(function(r){return '<dt>'+r[0]+'</dt><dd'+(r[2]?' class="pd-mono"':'')+'>'+r[1]+'</dd>'}).join('')+'</dl>'};
+var card=function(h,body,sub){return '<section class="pd-card"><div class="pd-head"><h2>'+h+'</h2>'+(sub?'<span class="pd-sub">'+sub+'</span>':'')+'</div>'+body+'</section>'};
+var btn=function(t,pri,href){return '<a class="pd-btn'+(pri?' pri':'')+'" href="'+(href||'#')+'">'+t+'</a>'};
+var acts=ok?btn('Download receipt',false,'Portal-Receipt.html')+btn('Email receipt')+btn('Record refund'):btn('Resend payment link',true)+btn('Call '+x.cust.split(' ')[0],false,'tel:'+c.phone.replace(/ /g,''))+btn('Record manual payment');
+document.title='Payment '+x.id+' | Ka’Mello Escape';
+main.innerHTML='<a href="Admin-Transactions.html" class="pd-back">← Transactions</a>'+
+'<div class="pd-top"><div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px"><h1>Payment of '+money(x.amt)+'</h1>'+badge(x.status)+'</div><p class="pd-lead">'+x.label+' for '+x.bk+' · '+esc(x.cust)+' · '+fd(x.date)+', '+x.time+' · <span class="pd-mono">'+x.id+'</span></p></div><div class="pd-acts">'+acts+'</div></div>'+
+'<section class="pd-card pd-pad"><div class="pd-steps">'+stepHtml+'</div></section>'+
+(f?'<div class="pd-callout"><span aria-hidden="true">ⓘ</span><div><b>Why it failed: '+f.reason+'.</b><br>'+f.advice+'</div></div>':'')+
+'<div class="pd-tiles"><div class="pd-card pd-tile"><div class="l">'+(ok?'Amount paid':'Amount attempted')+'</div><div class="v">'+money(x.amt)+'</div><div class="s">USD · '+x.card+'</div></div>'+
+'<div class="pd-card pd-tile"><div class="l">'+(ok?'Net to you':'Collected')+'</div><div class="v">'+(ok?money(net,2):'$0')+'</div><div class="s">'+(ok?'After '+money(fee+vat,2)+' gateway fees':'Nothing was charged')+'</div></div>'+
+'<div class="pd-card pd-tile"><div class="l">Booking total</div><div class="v">'+money(b.total)+'</div><div class="s">'+esc(b.title)+'</div></div>'+
+'<div class="pd-card pd-tile"><div class="l">Balance after this payment</div><div class="v">'+money(x.after)+'</div><div class="s">'+(ok?'Was '+money(x.before)+' before':'Unchanged')+'</div></div></div>'+
+'<div class="pd-grid"><div class="pd-stack">'+
+card('Payment journey','<ol class="pd-tl">'+J.map(function(s){return '<li class="'+(s.k||'')+'"><div class="pd-when">'+fd(s.dt||x.date)+(s.t?'<br>'+s.t:'')+'</div><div><div>'+s.w+'</div>'+(s.d?'<div class="pd-sub">'+s.d+'</div>':'')+'<span class="pd-actor">'+s.a+'</span></div></li>'}).join('')+'</ol>','From the customer’s click to the money reaching your bank')+
+card('Attempts on this payment',tx(attempts),attempts.length+' '+(attempts.length===1?'attempt':'attempts')+' for '+x.label)+
+card('All payments by '+esc(x.cust),tx(hist),hok.length+' successful · '+(hist.length-hok.length)+' failed · '+money(hok.reduce(function(s,t){return s+t.amt},0))+' collected')+
+card('Payment plan for '+x.bk,'<div class="pd-scroll"><table class="pd-t"><thead><tr><th>Payment</th><th>Due date</th><th class="r">Amount</th><th>Status</th><th>Receipt</th></tr></thead><tbody>'+P.map(function(r){var cur=r.t&&r.t.id===x.id||(!ok&&r.n===x.label);return '<tr'+(cur?' class="cur"':'')+'><td>'+r.n+(cur?' <span class="pd-sub">(this payment)</span>':'')+'</td><td>'+fd(r.due)+'</td><td class="r">'+money(r.amt)+'</td><td>'+badge(r.st)+'</td><td>'+(r.t?'<a class="pd-mono" href="Admin-PaymentDetails.html?id='+r.t.id+'">'+r.t.rcp+'</a>':'–')+'</td></tr>'}).join('')+'</tbody></table></div>',money(b.paid)+' paid of '+money(b.total)+' · '+b.freq)+
+'</div><div class="pd-stack">'+
+card('Payment details',dl([['Status',badge(x.status)],['Paid for',x.label],['Amount',money(x.amt)+' USD'],['Due date',fd(P.filter(function(r){return r.n===x.label})[0]?P.filter(function(r){return r.n===x.label})[0].due:x.date)],[ok?'Paid on':'Tried on',fd(x.date)+', '+x.time],['Paid through','Customer portal'],['Transaction ref.',x.id,1],ok&&['Receipt number',x.rcp,1],['Authorisation',ok?x.id.slice(-6):'Not authorised',ok]]))+
+(ok?card('Fees and settlement',dl([['Gross amount',money(x.amt,2)],['Gateway fee','2.9% + $0.30 = '+money(fee,2)],['VAT on fee',money(vat,2)],['Net to you','<b>'+money(net,2)+'</b>'],['Settlement',settled?'Settled '+fd(settle):'Expected '+fd(settle)],['Paid out to','Ka’Mello Escapes · account ending 0921']])):'')+
+(f?card('Failure details',dl([['Reason',f.reason],['Error code',f.code,1],['Failed at',f.step],['Caused by',f.src],['Customer charged','No']])):'')+
+card('Card and gateway',dl([['Card',x.card],['Cardholder',esc(x.cust)],['Gateway',GW],['Gateway result',ok?'Approved':'Declined'],['3-D Secure',ok?'Passed':'Passed, then declined by bank'],['Card details stored','No, held by the gateway only']]))+
+card('Customer',dl([['Name','<a href="Admin-CustomerDetails.html">'+esc(x.cust)+'</a>'],['Customer ID',c.id,1],['Email',c.email],['Phone',c.phone],['Country',c.country],['Paid from',c.device],['IP address',c.ip,1]]))+
+card('Booking',dl([['Reference','<a href="Admin-BookingDetails.html">'+x.bk+'</a>'],['Trip',esc(b.title)],['Type',b.type],['Travel dates',b.dates],['Travellers',b.trav],['Paid to date',money(b.paid)+' of '+money(b.total)]]))+
+card('Refunds','<div class="pd-pad pd-sub" style="padding-top:0">'+(ok?'No refunds on this payment.':'Nothing to refund. The customer was not charged.')+'</div>')+
+'</div></div>';
+})();
+</script>
 </body>
 </html>
